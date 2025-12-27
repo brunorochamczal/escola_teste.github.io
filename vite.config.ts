@@ -6,11 +6,12 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
   plugins,
+  // 1. Adicionado base: './' para que o site funcione em subpastas do GitHub
+  base: './', 
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -22,7 +23,8 @@ export default defineConfig({
   root: path.resolve(import.meta.dirname, "client"),
   publicDir: path.resolve(import.meta.dirname, "client", "public"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // 2. Ajustado para 'dist' para alinhar com o seu arquivo deploy.yml
+    outDir: path.resolve(import.meta.dirname, "dist"), 
     emptyOutDir: true,
   },
   server: {

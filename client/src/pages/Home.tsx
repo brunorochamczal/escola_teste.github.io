@@ -17,17 +17,17 @@ import {
 
 const bannerImages = [
   {
-    src: "/images/banner1.jpg",
+    src: "images/banner1.jpg",
     title: "Educação que Transforma",
     subtitle: "Preparando seu filho para um futuro brilhante",
   },
   {
-    src: "/images/banner2.jpg",
+    src: "images/banner2.jpg",
     title: "Aprendizado com Alegria",
     subtitle: "Ambiente acolhedor e estimulante para o desenvolvimento",
   },
   {
-    src: "/images/banner3.jpg",
+    src: "images/banner3.jpg",
     title: "Excelência em Ensino",
     subtitle: "Metodologia moderna com professores qualificados",
   },
